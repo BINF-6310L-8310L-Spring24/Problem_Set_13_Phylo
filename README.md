@@ -1,5 +1,9 @@
 # Problem_Set_13
 
+**BEFORE YOU BEGIN**
+
+To make sure that we all get the same answers, please use the command `set.seed(123)` before beginning the assignment. 
+
 This week, we will use phylogenetic comparative methods to analyze the dataset presented in "The whale shark genome reveals how genomic and physiological properties scale with body size" from Weber et al 2020
 
 We will analyze the phenotypic trait data because the genomic features *were not* provided in the supplemental files. While the genome versions are listed in the paper, they should have provided the summary statistics as the genome versions may become unavailable in the future. In this case, it would also be appropriate to email the corresponding author to ask for the genome statistics.
