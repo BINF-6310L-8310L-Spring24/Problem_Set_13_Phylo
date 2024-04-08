@@ -52,8 +52,10 @@ Report the p-value for the PGLS analysis
 Report the p-value for the GLS analysis 
 
 ## Question 2C
+Based on this result do we expect a greater or smaller change in max weight for each unit increase in max life for the PGLS as compared to the GLS? In other words, does the PGLS increase or decrease the slope of the line?
 
-- Based on this result do we expect a greater or smaller change in max weight for each unit increase in max life for the PGLS as compared to the GLS? In other words, does the PGLS increase or decrease the slope of the line?
+## Question 2D
+Compare the PGLS and GLS results. Does conducting the PGLS analysis make you more confident that there is a real correlation between Max Weight and Max Life or less confident? 
 
 &nbsp;
 &nbsp;
