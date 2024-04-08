@@ -1,6 +1,6 @@
-# Problem_Set_12
+# Problem_Set_13
 
-This week we will use phylogenetic compatative methods to analyze the dataset presented in "The whale shark genome reveals how genomic and physiological properties scale with body size" from Weber et al 2020
+This week, we will use phylogenetic comparative methods to analyze the dataset presented in "The whale shark genome reveals how genomic and physiological properties scale with body size" from Weber et al 2020
 
 We will analyze the phenotypic trait data because the genomic features *were not* provided in the supplemental files. While the genome versions are listed in the paper, they should have provided the summary statistics as the genome versions may become unavailable in the future. In this case, it would also be appropriate to email the corresponding author to ask for the genome statistics.
 
@@ -25,37 +25,65 @@ This is a newick formatted tree
 - Read in the phenotype file 
 - Read in the ree using the ```read.tree()``` function 
 - Create a new column in the data file containing the log10 values for Max_Life and Max_Weight (use the function ```log10()```)
-- Report the log10 values for Max_Life and Max_Weight for *Ailuropoda melanoleuca*
 
-### Problem 2 - Linear relationship between Weight and Lifespan (3 points)
+## Question 1A
+Report the log10 values for Max_Weight for *Ailuropoda melanoleuca*
+
+## Question 1B
+Report the log10 values for Max_Life for *Ailuropoda melanoleuca*
+
+&nbsp;
+&nbsp;
+
+### Problem 2 - Linear relationship between Weight and Lifespan 
 
 - Use the ```pgls()``` function to obtain a phylogenetic linear model between the log10 of Max Life and Max Weight (use the formula Max_Weight_ln ~ Max_Life_ln). Also estimate the lambda parameter by using ```lambda="ML"```
 - Use the ```gls()``` function to obtain a standard linear model between the log10 Max Life and Max Weight 
-- Plot the data and add the two regression lines 
+- Plot the data and add the two regression lines
+  
+## Question 2A
+Report the p-value for the PGLS analysis
+
+## Question 2B 
+Report the p-value for the GLS analysis 
+
+## Question 2C
+
 - Based on this result do we expect a greater or smaller change in max weight for each unit increase in max life for the PGLS as compared to the GLS? In other words, does the PGLS increase or decrease the slope of the line?
 
-### Problem 3 - phylANOVA (3 points)
+&nbsp;
+&nbsp;
 
-To conduct our phylANOVA we will have to do a few pieces of modification to our dataset
+### Problem 3 - phylANOVA 
+
+To conduct our phylANOVA we will have to do a few modifications to our dataset
 
 - Create a subset of the dataset including only the species in the Mammalia and Actinopterygii classes
 - Subset the tree to include only these species using the ```keep.tip()``` functon. This may look something like ```churchTree_sub<-keep.tip(churchTree, church_sub$species)```
 - We also need to clean up the tree a bit using the ```collapse.singles()``` function ```churchTree<-collapse.singles(churchTree,root.edge=TRUE)```
 - Conduct an ANOVA comparing the Max Lifespan, Max Weight, and Body temperature of Mammals and Actinoptergyii. 
+
+## Question 3A
 - Which measures are significantly different between Mammals and Actinoptergyii
 
+&nbsp;
+&nbsp;
 
 ### Problem 4 - phylPCA (3 points)
 
 Next we will visualize our three variables (Lifespan, Weight, Body Temp) using PCA. 
 
-- Scale the three varaibles using the ```scale()``` function
-- Conduct a phylPCA using ```phylPCA``` 
-- How much variation is captured in PC1? 
+- Scale the three variables using the ```scale()``` function
+- Conduct a phylPCA using ```phylPCA```
 - Combine the PC position data with the original matrix so that you have the species names and classes
 - Plot the species on PC1 and PC2. Use the function ```geom_text(aes(label=species))``` to include the spcies names on the plot
-- Which three species are clear outliers in the data?
 
+  
+## Question 4A
+- How much variation is captured in PC1?
+
+## Question 4B
+- Which three species are clear outliers in the data?
 
 ### Knit and upload your document 
 
